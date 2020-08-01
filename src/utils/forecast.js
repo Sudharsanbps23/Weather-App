@@ -9,7 +9,7 @@ const forecast = (longitude,latitude,callback) => {
             callback('Unable to find the connection',undefined);
         }else{
             callback(undefined,
-                body.current.weather_descriptions + '.It is currently ' + body.current.temperature + ' degrees out. There is a '+ body.current.precip + ' of rain');
+                body.current.weather_descriptions + '.It is currently ' + body.current.temperature + ' degrees out.It feels like ' + body.current.feelslike + ' degrees out. There is a '+ body.current.humidity + ' of rain');
         }
     });
 };
